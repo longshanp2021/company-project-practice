@@ -1,0 +1,33 @@
+form {
+    display: block;
+}
+
+div.student {
+    padding: 12px 0;
+}
+
+div.fitem {
+    display: flex;
+
+}
+
+div.fitem label {
+    display: block;
+    width: 80px;
+}
+
+div.group {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+div.group.alone {
+    width: 100%;
+    margin-top: 20px;
+}
+
+div.group>div {
+    margin-right: 30px;
+}

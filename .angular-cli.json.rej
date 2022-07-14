@@ -1,0 +1,10 @@
+diff a/.angular-cli.json b/.angular-cli.json	(rejected hunks)
+@@ -27,6 +27,8 @@
+             "assets/ag-grid/styles/ag-grid.css",
+             "assets/ag-grid/styles/theme-blue.css",
+             "assets/swiper/dist/css/swiper.css",
++            "../node_modules/devextreme/dist/css/dx.common.css",
++            "../node_modules/devextreme/dist/css/dx.light.css",
+             "styles.scss"
+ 
+         ],

@@ -1,0 +1,52 @@
+<form [formGroup]="form">
+    <div class="fitem">
+        <label>标题</label>
+        <input type="text" formControlName="title">
+    </div>
+    <div class="student">
+        <button (click)="addStudent()">添加学生</button>
+    </div>
+    <div class="student" formArrayName="students">
+        <ng-container *ngFor="let fg of studentControl?.controls;let i = index">
+            <div class="group" [formGroupName]="i">
+                
+                <div class="fitem">
+                    <label>姓名</label>
+                    <input type="text" formControlName="name">
+                </div>
+
+                <div class="fitem">
+                    <label>年纪</label>
+                    <input type="number" formControlName="age">
+                </div>
+                
+                <div class="group alone">
+                    <button (click)="addCard(fg)">添加公交卡</button>
+                </div>
+
+                <ng-container formArrayName="cards">
+
+                    <ng-container *ngFor="let g of fg.get('cards')?.controls;let gi = index">
+
+                        <div class="group alone" [formGroupName]="gi">
+                            
+                            <div class="fitem">
+                                <label>Key</label>
+                                <input type="text" formControlName="key">
+                            </div>
+
+                            <div class="fitem">
+                                <label>No</label>
+                                <input type="text" formControlName="no">
+                            </div>
+
+                        </div>
+
+                    </ng-container>
+
+                </ng-container>
+
+            </div>
+        </ng-container>
+    </div>
+</form>
